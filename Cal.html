@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="Cal.css">
+    <script type="text/javascript" src="Cal.js"></script>
+</head>
+
+<body background="Cal.jpeg" style="	background-repeat: no-repeat;background-size:cover;">
+    <form name="operation">
+        <fieldset>
+
+            <table>
+                <legend>Basic Calculations</legend>
+                <tr>
+                    <td><input type="text" id="num1" name="num1" placeholder="enter first number" /></td>
+                    <td> <select id="opt" name="opt">
+                <option>--Select--</option>
+                <option value="add">add(+) </option>
+                <option value="sub">sub(-) </option>
+                <option value="multiply">multiply(*)</option>
+                <option value="div">div(/)</option>
+                <option value="mod">mod(%)</option>
+                </select></td>
+                    <td> <input type="text" id="num2" name="num2" placeholder="enter second number" /></td>
+
+                    <td> <input type="button" onclick="myfunction(opt.value)" value="calculate" style="background-color:yellow"
+                        /></td>
+                </tr>
+            </table>
+            <table>
+                <td colspan="4" align="center"><input type="text" name="result" placeholder="result" /></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

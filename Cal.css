@@ -1,0 +1,19 @@
+input:hover {
+            color: blue;
+        }
+        
+        input:focus {
+            color: blue;
+        }
+        
+       
+        
+        button:hover {
+            color: red;
+        }
+        
+        button:focus {
+            color: red;
+        }
+        
+       
