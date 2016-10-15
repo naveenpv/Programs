@@ -8,6 +8,7 @@
 <body>
 <h1>Next Date</h1>
 <script>
+
 Date.prototype.nextDay = function(){
   var currentDate = this.getDate();
 
@@ -15,7 +16,7 @@ Date.prototype.nextDay = function(){
 }
 var date = new Date();
 document.write("todays date is-->");
-document.write(date); //Fri May 16 2014 20:47:14 GMT-0500 (Central Daylight Time)
+document.write(date);
 document.write("<br>");
 document.write("next date is-->");
 document.write(date.nextDay());
