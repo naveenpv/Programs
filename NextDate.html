@@ -1,0 +1,24 @@
+/*@Author: Naveen P.V
+ *File:NextDAte.html
+ *Date:15/10/2016
+ *Program:Findout the next day using JS Prototype
+ */
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Next Date</h1>
+<script>
+Date.prototype.nextDay = function(){
+  var currentDate = this.getDate();
+
+  return new Date(this.setDate(currentDate +1));
+}
+var date = new Date();
+document.write("todays date is-->");
+document.write(date); //Fri May 16 2014 20:47:14 GMT-0500 (Central Daylight Time)
+document.write("<br>");
+document.write("next date is-->");
+document.write(date.nextDay());
+</script>
+</body>
+</html>

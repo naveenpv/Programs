@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<h1>Log Prefix</h1>
+<script>
+function loging(){
+  var args = Array.prototype.slice.call(arguments);
+  args.unshift('(BridgeLabz)');
+  console.log.apply(console, args);
+}
+loging('my message');
+loging('i am working','on Anjularjs');
+
+</script>
+</body>
+</html>
