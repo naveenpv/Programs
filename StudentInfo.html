@@ -1,0 +1,59 @@
+/*@Author: Naveen P.V
+  *@File:StudentInfo.html
+  *@Date:21/10/2016
+  *@Program:Printing the details of Student
+  */
+
+
+
+
+<html>
+<head>
+<title>student details</title>
+<style type="text/css"> 
+input:hover{color:blue;}
+input:focus{color:blue;}
+select{
+input:hover{color:green;}
+input:focus{color:green;}
+}
+
+ </style>
+<script>
+function myfunction(){
+    var name = document.getElementById("name1").value;
+    var age = document.getElementById("age1").value;
+     var rollnumber = document.getElementById("roll1").value;
+               
+             document.write("<center><h1>"+"student details"+"<br></h1></center>");
+             document.write("<center>"+"you enter name is: " +name+"<br></center>");
+             document.write("<center>"+"you enter age is: "  +age+"<br></center>");
+             document.write("<center>"+"you enter rollnumber is: " +rollnumber+"<br></center>");
+            
+    }
+   </script>
+<body bgcolor="99FFFF">
+<center>
+
+
+<form action="" name="StudentRegistration">
+    <table cellpadding="2" width="50%" height="50%" align="center"
+cellspacing="2" bgcolor="red" >
+<tr>
+<td colspan=2>
+<center><font size=5><b><u>Student Registration Form</u></b></font></center>
+</td>
+</tr>
+       <tr>
+       <td> Name:</td>
+           <td><input type="text" name="Name" id="name1"></td>
+       </tr>
+       <tr><td> Age:</td><td><input type="text" name="Age" id="age1"></td></tr>
+
+       <tr><td> RollNumber:</td><td><input type="text" name="RollNumber" id="roll1"></td></tr>
+       <tr><td><input type="button" value="submit"  onclick="myfunction()" /></td></tr>
+    </table>
+</form>
+</center>
+</body>
+</html>

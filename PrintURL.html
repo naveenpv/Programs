@@ -1,0 +1,33 @@
+/*@Author: Naveen P.V
+  *@File:PrintURL.html
+  *@Date:20/10/2016
+  *@Program:Printing the parts of the URL
+  */
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <body align="center" bgcolor="#E6E6FA">
+  <script>
+var newURL = window.location.protocol + "://" + window.location.host + "/" + window.location.pathname;
+document.write(newURL+"<br>");
+document.write("<br>");
+document.write("<br>");
+document.write("url is-->" +window.location.href+"<br>");
+document.write("<br>");
+document.write("<br>");
+document.write("protocol is--> " + window.location.protocol+"<br>");
+document.write("<br>");
+document.write("<br>");
+document.write("hostname is-->"+ window.location.host+"<br>");
+document.write("<br>");
+document.write("<br>");
+document.write("pathname is-->"+window.location.pathname+"<br>");
+
+</script>
+</body>
+</html>

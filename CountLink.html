@@ -1,0 +1,52 @@
+/*@Author: Naveen P.V
+  *@File:CountLink.html
+  *@Date:19/10/2016
+  *@Program:Make a Calculation object which will have 3 functions first(),second() and sum().
+            All these function should called by chain method.
+  */
+<html>
+<head>
+<title>Get all links on a page</title>
+<style>
+a:link, a:visited {
+    background-color: red;
+    color: black;
+    border: 2px solid green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    float:left;
+    
+}
+
+a:hover, a:active {
+    background-color: green;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<h1>Get all links on a page</h1>
+
+
+<a href="http://www.java2s.com/">Home</a>
+<a href="http://www.java2s.com/">Login</a>
+<a href="http://www.java2s.com/">StudentRegistration</a>
+<a href="http://www.java2s.com/">Changepassword</a>
+<a href="http://www.java2s.com/">Logout</a>
+
+
+<script language="javascript" type="text/javascript">
+
+var allLinks = document.links;
+document.write("<BR/>");
+document.write("<BR/>");
+document.write("<BR/>");
+document.write("<BR/>");
+document.write("Number of links:"+allLinks.length+"<BR/>");
+</script>
+
+</body>
+</html>

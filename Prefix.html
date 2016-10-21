@@ -1,0 +1,41 @@
+/*@Author: Naveen P.V
+  *@File:Prefix.html
+  *@Date:19/10/2016
+  *@Program:Prefix word to any number of user input
+  */
+
+<html>
+
+<head>
+    <title>bridgeit</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+    var str = {
+        num: "bridgeit:"
+    };
+    /**
+     * decription of function
+     * @param {object}
+     * @rerun 
+     */
+    function myfunction(...args) {
+        for (i = 0; i < args.length; i++) {
+            
+            document.write(this.num + " " + args[i] + "<br>");
+        }
+}
+        var n = prompt("enter the range:"),
+            x = [];
+        for (var i = 0; i < n; i++) {
+            x[i] = prompt("enter the name:");
+        }
+        
+        myfunction.apply(str, x);
+    
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+/*@Author: Naveen P.V
+  *@File:AddRowCol.html
+  *@Date:18/10/2016
+  *@Program:Adding Rows and columns to an existing table
+  */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, thead {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+    <br>
+      <input type="button" value="Add row"  onClick="addRow()" />
+      <input type="button" value="Add column"  onClick="addColumn()" />
+
+      <br><br>
+      <table id="my_table" align="left" border="4">
+          <thead DETAILS>
+              <tr>
+                  <th>Name</th>
+                  <th>JoiningDate</th>
+
+              </tr>
+
+          </thead>
+          <tbody>
+              <tr>
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+              </tr>
+
+
+          </tbody>
+      </table>
+
+  <script>
+      // Add row to the HTML table
+      function addRow() {
+          var table = document.getElementById('my_table'); //html table
+          var rowCount = table.rows.length; //no. of rows in table
+          var columnCount = table.rows[0].cells.length; //no. of columns in table
+          var row = table.insertRow(rowCount);
+          //insert a row
+          var cell1 = row.insertCell(0); //create a new cell
+          var element1 = document.createElement("input"); //create a new element
+          cell1.appendChild(element1); //append element to cell
+          var cell2 = row.insertCell(1);
+          var element2 = document.createElement("input");
+          cell2.appendChild(element2);
+          //Add the cells for more than 3 columns
+          if (columnCount >= 2) {
+              for (var i = 3; i <= columnCount; i++) {
+                  var newCel = row.insertCell(i - 1); //create a new cell
+                  var element = document.createElement("div"); //create a div element
+                  //var txt = document.createTextNode("cell "+i); //create a text element
+                  element.appendChild(txt); //append text to div
+                  newCel.appendChild(element); //appent div to cell
+              }
+          }
+      }
+      function addColumn() {
+          var tblHeadObj = document.getElementById('my_table').tHead; //table head
+          for (var h = 0; h < tblHeadObj.rows.length; h++) {
+              var newTH = document.createElement('th');
+              tblHeadObj.rows[h].appendChild(newTH); //append ne th to table
+              //append th content to th
+              var x = prompt("enter the column name:");
+              newTH.innerHTML = x;
+              //newTH.innerHTML = 'Column '+ (tblHeadObj.rows[h].cells.length);
+          }
+          var tblBodyObj = document.getElementById('my_table').tBodies[0]; //table body
+          for (var i = 0; i < tblBodyObj.rows.length; i++) {
+              var newCell = tblBodyObj.rows[i].insertCell(-1); //create new cell
+              //var element3 = document.createElement("input");
+              var element = document.createElement("div"); //create a div element
+              var txt = document.createElement("input"); //create a text element
+              element.appendChild(txt); //append text to div
+              //for( i=0;i<tblBodyObj.rows.length;i++)
+              newCell.appendChild(element);
+          }
+      }
+  </script>
+  </body>
+  </html>

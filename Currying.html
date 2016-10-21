@@ -1,0 +1,48 @@
+/*@Author: Naveen P.V
+  *@File:Currying.html
+  *@Date:18/10/2016
+  *@Program:Performing the basic arithmetic operations using currying method in JS
+  */
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+   initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+       
+        var addition = function(a) {
+            return function(b) {
+                return parseInt(a) + parseInt(b);
+            }
+        };
+        var division = function(a) {
+            return function(b) {
+                return a / b;
+            }
+        };
+        var a=prompt("enter the value of a",10);
+        var b=prompt("enter the value of b");
+        var add = addition(a); // returns addition funstion with sec arg i,e  var add=function(b){RETURNS a+b}
+        var addto = add(b);
+        document.write("<br>");
+        document.write("addition of two numbers: " + addto + "<br>");
+        var div = division(a);
+        var divide = div(b);
+        document.write("<br>");
+        document.write("division of two numbers: " + divide + "<br>");
+    </script>
+
+
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>
